@@ -1,0 +1,787 @@
+:root {
+    --color-1: #F8F8FF;
+    --color-2: #8C82FC;
+    --color-3: #44E4C9;
+    --color-4: #BAB8D2;
+    --color-5: #DDFFF9;
+    --color-6: #22293E;
+    --border-color: #ccc;
+    --border-radius: 1rem;
+    --box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    --transition: all 0.5s ease-in-out;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--color-6);
+    padding: 0;
+    margin: 0;
+}
+
+.main {
+    overflow: hidden;
+}
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.nav-logo h1 {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.nav-logo img {
+    width: 1.5rem;
+}
+
+.nav-bar,
+.nav-btn {
+    display: none;
+}
+
+#modal-mobile {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+
+
+.nav-bar-mobile li {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+    text-decoration: none;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-bar-mobile li:hover {
+    background-color: var(--color-5);
+}
+
+.nav-bar-mobile li a {
+    color: var(--color-6);
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.nav-btn-mobile {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    gap: 1rem
+}
+
+.nav-btn-mobile button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    cursor: pointer;
+    width: 100%;
+    padding: 0.75rem 0;
+    transition: background-color var(--transition);
+}
+
+.nav-btn-mobile .login {
+    background-color: transparent;
+    color: var(--color-3);
+}
+
+.nav-btn-mobile .signin {
+    background-color: var(--color-3);
+    color: white;
+}
+
+/* hero */
+
+#hero {
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.hero-text p {
+    color: #8C82FC;
+    font-weight: 500;
+}
+
+.hero-text h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 1rem 0;
+    line-height: 1.2;
+}
+
+.hero-text .desc {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #22293E;
+    margin: 1rem 0;
+}
+
+.hero-btn {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.hero-btn button {
+    padding: 0.7rem 1.2rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    cursor: pointer;
+    background-color: transparent;
+    transition: background-color var(--transition);
+}
+
+.hero-btn .get-strated {
+    background-color: var(--color-2);
+    color: white;
+}
+
+.hero-btn .our-service {
+    background-color: var(--color-1);
+    color: var(--color-6);
+}
+
+.hero-img {
+    position: relative;
+
+}
+
+.hero-img img {
+    position: relative;
+    z-index: 999;
+    width: 100%;
+}
+
+#img-1 {
+    position: absolute;
+    top: 3rem;
+    right: 0;
+    width: 100%;
+    z-index: 0;
+}
+
+#img-2 {
+    position: absolute;
+    top: 5rem;
+    right: 2rem;
+    width: 100%;
+    z-index: 1;
+}
+
+#img-3 {
+    position: absolute;
+    top: 6rem;
+    left: 6rem;
+    width: 2rem;
+    z-index: 2;
+}
+
+#img-4 {
+    position: absolute;
+    top: -2rem;
+    right: 12rem;
+    width: 60%;
+    z-index: 4;
+}
+
+/* Learning */
+#Learning,
+#about-us,
+#testimony {
+    padding: 2rem 1rem;
+}
+
+.learn-text h3 {
+    color: #8C82FC;
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 0;
+}
+
+.learn-text h1 {
+    font-size: 1.75rem;
+    font-weight: 500;
+    margin: 1rem 0;
+    line-height: 1.2;
+}
+
+.learn-text p {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #22293E;
+    margin: 1rem 0;
+}
+
+
+/* cards */
+#card-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.card img {
+    flex-shrink: 1;
+    object-fit: contain;
+}
+
+.card .card-detail {
+    flex-shrink: 0;
+    line-height: 0.4;
+}
+
+.card .card-detail button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    cursor: pointer;
+    background-color: var(--color-3);
+    color: white;
+    transition: background-color var(--transition);
+}
+
+.card .card-detail .desc {
+    width: 50%;
+    line-height: 1.2;
+}
+
+.card {
+    background-color: white;
+    box-sizing: border-box;
+    display: flex;
+    align-items: start;
+    gap: 1rem;
+}
+
+/* about us */
+
+
+.list {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.list .icon {
+    background-color: var(--color-5);
+    height: 3rem;
+    width: 5rem;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list .icon img {
+    object-fit: cover;
+    padding: 0.25rem;
+}
+
+
+
+.about-text h1,
+#testimony h1 {
+    font-size: 1.75rem;
+    font-weight: 500;
+    margin: 1rem 0;
+    line-height: 1.2;
+}
+
+.about-text h3 {
+    color: #8C82FC;
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 0;
+}
+
+.about-text p,
+#testimony p {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #22293E;
+    margin: 1rem 0;
+}
+
+.about-img img {
+    width: 100%;
+    border-radius: var(--border-radius);
+}
+
+/* testimony */
+
+#testimony,
+#alumni {
+    padding: 0 1rem;
+}
+
+
+
+/* cta */
+
+#cta {
+    background: url('./assets/cov.png') no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+#cta .content {
+    background-color: rgba(1, 1, 1, 0.699);
+    color: white;
+    padding: 3rem 1rem;
+}
+
+.content h1 {
+    font-size: 1.75rem;
+    font-weight: 500;
+    margin: 1rem 0;
+    line-height: 1.2;
+}
+
+.cta-btn button {
+    padding: 0.7rem 1.2rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    cursor: pointer;
+    background-color: var(--color-2);
+    color: white;
+}
+
+.cta-btn {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.cta-btn .about {
+    background-color: transparent;
+
+}
+
+
+/* alumni */
+
+#alumni {
+    padding: 4rem 1rem;
+}
+
+#alumni h1 {
+    font-size: 1.75rem;
+    font-weight: 500;
+    margin: 1rem 0;
+    line-height: 1.2;
+}
+
+#alumni h3 {
+    color: #8C82FC;
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 0;
+}
+
+#alumni p {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #22293E;
+    margin: 1rem 0;
+}
+
+#alumni-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.alumni-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid var(--color-2);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    gap: 1rem;
+    text-align: center;
+}
+
+#alumni-list .job {
+    font-size: 1rem;
+    line-height: 0;
+    color: var(--color-4);
+}
+
+/* footer */
+
+footer {
+    padding: 2rem 1rem;
+}
+
+footer .logo p {
+    font-size: 1rem;
+}
+
+footer .company h1,
+footer .contact h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 1rem 0;
+    line-height: 1.2;
+}
+
+footer .company div a,
+footer .contact div a {
+
+    color: var(--color-6);
+    font-size: 1rem;
+    text-decoration: none;
+    display: flex;
+    gap: 1rem;
+
+}
+
+footer .contact div a img {
+    width: 1rem;
+}
+
+footer .company div,
+footer .contact div {
+    display: flex;
+    line-height: 1;
+    gap: 1rem;
+    flex-direction: column;
+}
+
+footer .wrap {
+    display: flex;
+    gap: 2rem;
+    margin: 1rem 0;
+}
+
+@media screen and (max-width : 678) {
+    .wrap-modal {
+        background-color: #F8F8FF;
+        margin: 1rem;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        border-radius: var(--border-radius);
+    }
+}
+
+@media screen and (min-width: 678px) and (max-width: 999px) {
+    #header {
+        padding: 0 4rem;
+    }
+
+    .wrap-modal {
+        background-color: #F8F8FF;
+        margin: 2rem 4rem;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        border-radius: var(--border-radius);
+    }
+
+    #hero {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0 4rem;
+        margin: 2rem 0;
+        align-items: center;
+        gap: 3rem
+    }
+
+    #hero .hero-img .man{
+        width: 100%;
+    }
+
+    #Learning,
+    #about-us,
+    #testimony,
+    #alumni,
+    #cta .content ,
+    footer {
+        padding: 3rem 4rem;
+    }
+
+    #card-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+
+    .card {
+        background-color: white;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 2rem;
+        gap: 2rem;
+        box-shadow: var(--box-shadow);
+        border-radius: var(--border-radius);
+        transition: var(--transition);
+    }
+
+    .card:hover {
+        transform: translateY(-0.5rem);
+    }
+
+    .card .card-detail {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card .card-detail .desc {
+        width: 100%;
+    }
+
+
+    #about-us article {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    #testimony {
+        text-align: center;
+        background-color: var(--color-1);
+    }
+
+    #Learning {
+        background-color: var(--color-1);
+    }
+
+    #alumni-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 1rem;
+    }
+
+    footer {
+        display: flex;
+        gap: 2rem;
+
+    }
+
+    footer .wrap {
+        margin: 0;
+    }
+    #cta .content, #alumni .alumni-text{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        line-height: 0;
+        align-items: center;
+    }
+
+}
+
+@media screen and (min-width : 1000px) {
+    #header {
+        padding: 2rem 6rem;
+    }
+
+    #nav-mobile {
+        display: none;
+    }
+
+    .nav-bar,
+    .nav-btn {
+        display: block;
+    }
+
+    .nav-bar li {
+        display: inline;
+        margin: 0 1rem;
+    }
+
+    .nav-bar li a {
+        color: var(--color-6);
+        font-size: 1.2rem;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav-btn button {
+        padding: 0.75rem 2rem;
+        border: none;
+        border-radius: 0.5rem;
+        font-size: 1.2rem;
+        font-weight: 500;
+        cursor: pointer;
+        background-color: transparent;
+        transition: background-color var(--transition);
+    }
+
+    .nav-btn .login {
+        color: var(--color-2);
+    }
+
+    .nav-btn .signin {
+        color: white;
+        background-color: var(--color-2);
+    }
+
+    #hero{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 4rem;
+        align-items: center;
+        padding: 0 6rem;
+    }
+
+    #hero .hero-img .man{
+        width: 80%;
+    }
+
+    #img-4{
+        left: -6rem;
+    }
+
+    #img-1,#img-2 {
+        width: 90%;
+    }
+
+    #Learning,
+    #about-us,
+    #testimony,
+    #alumni,
+    #cta .content ,
+    footer {
+        padding: 4rem 6rem;
+    }   
+
+    #card-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 1rem;
+    
+    }
+
+    .card{
+        background-color: white;
+        flex-direction: column;
+        align-items: start;
+        text-align: start;
+        padding: 1.5rem;
+        gap: 2rem;
+        box-shadow: var(--box-shadow);
+        border-radius: var(--border-radius);
+        transition: var(--transition);
+    }
+
+    .card:hover {
+        transform: translateY(-0.5rem);
+    }
+
+    .card .card-detail {
+        display: flex;
+        flex-direction: column;
+        line-height: 0;
+
+    }
+
+    .card .card-detail .desc {
+        width: 100%;
+    }
+
+    #about-us article {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    #testimony {
+        text-align: center;
+        background-color: var(--color-1);
+    }
+
+    #Learning {
+        background-color: var(--color-1);
+    }
+
+    #alumni-list {
+        margin-top: 6rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 1rem;
+    }
+
+    footer {
+        display: flex;
+        gap: 2rem;
+
+    }
+
+    footer .wrap {
+        margin: 0;
+    }
+
+    .list .icon {
+        height: 3rem;
+        width: 3rem;
+    }
+
+
+    .alumni-card{
+        position: relative;
+        transition: var(--transition);
+    }
+
+    #alumni .alumni-card img{
+        position: absolute;
+        top:-3rem;
+        
+    }
+    .alumni-card:hover{
+        position: relative;
+        transform: translateY(-0.5rem);
+    }
+
+
+    #cta .content, #alumni .alumni-text{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        line-height: 0;
+        align-items: center;
+    }
+}
