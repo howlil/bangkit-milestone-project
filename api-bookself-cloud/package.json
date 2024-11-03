@@ -1,0 +1,18 @@
+{
+  "name": "api-bookself-cloud",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@hapi/hapi": "^21.3.12",
+    "nanoid": "^5.0.8",
+    "nodemon": "^3.1.7"
+  }
+}
